@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">WiFi Station</string>
+    <string name="ip_txt">IP WiFi server: </string>
+    <string name="port_txt">port: </string>
+    <string name="ip_value">192.168.4.1</string>
+    <string name="port_value">3000</string>
+    <string name="wifiON_txt">WiFi actiu</string>
+    <string name="wifiOFF_txt">WiFi inactiu</string>
+    <string name="connect_btn">Connecta amb el Servidor</string>
+    <string name="decrementa_msg">{\"b\":0.5}</string>
+    <string name="incrementa_msg">{\"p\":0.5}</string>
+    <string name="temperatura">%s ºC</string>
+    <string name="blanc"></string>
+    <string name="title_receiveMessages">Rebut del servidor</string>
+    <string name="title_sendMessages">Enviat al servidor</string>
+    <string name="title_estat">errors</string>
+
+    <string name="connecting">connectant amb el servidor WiFi </string>
+    <string name="no_connect">No hi ha connexió amb el servidor WiFi.</string>
+    <string name="no_wifi">WiFi inaccesible\n</string>
+    <string name="send_message">%d) %s</string>
+
+    <string name="err_MainThread">MainThread: %s\n</string>
+    <string name="err_ListenerThread">Listener: %s\n</string>
+    <string name="err_Json">rebut missatge incomprensible: %s\n</string>
+</resources>

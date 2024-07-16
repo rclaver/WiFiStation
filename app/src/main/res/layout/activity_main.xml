@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#AE1717"
+        android:text="@string/app_name"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/title_srvIP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title"
+        android:layout_marginTop="8dp"
+        android:text="@string/ip_txt"
+        android:visibility="invisible" />
+    <EditText
+        android:id="@+id/srvIP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="5dp"
+        android:layout_alignBaseline="@id/title_srvIP"
+        android:layout_toEndOf="@id/title_srvIP"
+        android:hint="@string/ip_txt"
+        android:inputType="text"
+        android:text="@string/ip_value"
+        android:textSize="14sp"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/title_srvPort"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/title_srvIP"
+        android:layout_toEndOf="@id/srvIP"
+        android:text="@string/port_txt"
+        android:visibility="invisible" />
+    <EditText
+        android:id="@+id/srvPort"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="5dp"
+        android:layout_alignBaseline="@id/title_srvIP"
+        android:layout_toEndOf="@id/title_srvPort"
+        android:hint="@string/port_txt"
+        android:inputType="number"
+        android:text="@string/port_value"
+        android:textSize="14sp"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/wifiOFF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/no_wifi"
+        android:layout_toEndOf="@id/srvPort"
+        android:layout_marginStart="75dp"
+        android:contentDescription="@string/wifiOFF_txt" />
+    <ImageView
+        android:id="@+id/wifiON"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/wifi"
+        android:layout_toEndOf="@id/srvPort"
+        android:layout_marginStart="75dp"
+        android:contentDescription="@string/wifiON_txt"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/btnConnect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title_srvIP"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:text="@string/connect_btn"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/temperatura"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnConnect"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:hint="@string/temperatura"
+        android:textAlignment="center"
+        android:textSize="34sp"
+        android:textStyle="bold" />
+
+    <ImageButton
+        android:id="@+id/btnDecrementar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/temperatura"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="50dp"
+        android:backgroundTintMode="screen"
+        android:src="@drawable/decrementar60"
+        android:tag="@string/decrementa_msg" />
+    <ImageButton
+        android:id="@+id/btnIncrementar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/temperatura"
+        android:layout_marginTop="50dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="60dp"
+        android:backgroundTintMode="screen"
+        android:src="@drawable/incrementar60"
+        android:tag="@string/incrementa_msg" />
+
+    <TextView
+        android:id="@+id/title_receiveMessages"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/receiveMessages"
+        android:text="@string/title_receiveMessages"
+        android:textStyle="bold|italic" />
+    <TextView
+        android:id="@+id/receiveMessages"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/title_sendMessages"
+        android:hint="@string/blanc" />
+    <TextView
+        android:id="@+id/title_sendMessages"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/sendMessages"
+        android:layout_marginTop="10dp"
+        android:text="@string/title_sendMessages"
+        android:textStyle="bold|italic" />
+    <TextView
+        android:id="@+id/sendMessages"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/title_estat"
+        android:hint="@string/blanc" />
+
+    <TextView
+        android:id="@+id/title_estat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/scrollestat"
+        android:text="@string/title_estat"
+        android:textStyle="bold|italic"
+        android:layout_marginTop="10dp"
+        android:visibility="invisible" />
+    <ScrollView
+        android:id="@+id/scrollestat"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_above="@id/btnClose"
+        android:scrollIndicators="right" >
+        <TextView
+            android:id="@+id/estat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </ScrollView>
+
+    <ImageButton
+        android:id="@+id/btnClose"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="#00FFFFFF"
+        android:layout_alignParentBottom="true"
+        android:layout_alignEnd="@id/scrollestat"
+        android:src="@drawable/power_off" />
+
+</RelativeLayout>
